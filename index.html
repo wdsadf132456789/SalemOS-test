@@ -2,49 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SalemOS v0.1</title>
+    <title>SalemOS v1.0</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="links-menu" class="hidden">
-        [ File | View | Link | Downloads | Setup | Help ]
+    <div id="terminal">
+        <div id="cli-output">
+            <p>SalemOS v1.0 Kernel Booted...</p>
+            <p>Type 'help' for a list of commands.</p>
+        </div>
+        
+        <form id="prompt-line">
+            <span id="prompt-text">root@salem:/# </span>
+            <input type="text" id="cli-input" autofocus autocomplete="off">
+        </form>
     </div>
-
-    <header>
-        <pre>
-  ____        _           ___  ____
- / ___|  __ _| | ___ _ __/ _ \/ ___|
- \___ \ / _` | |/ _ \ '_ \ (_) \___ \
-  ___) | (_| | |  __/ | | \__, |___) |
- |____/ \__,_|_|\___|_| |_| /_/|____/
-        </pre>
-    </header>
-
-    <nav>
-        <h2>MAIN MENU</h2>
-        <ul>
-            <li><a href="#" class="nav-item focused">* System Terminal</a></li>
-            <li><a href="#" class="nav-item">* File Manager</a></li>
-            <li><a href="#" class="nav-item">* Network Settings</a></li>
-            <li><a href="#" class="nav-item">* Premium Features</a></li>
-        </ul>
-    </nav>
-
-    <section id="system-stats">
-        <h2>SYSTEM PERFORMANCE</h2>
-        <pre>
-CPU Load : [<span id="cpu-bar">..........</span>] <span id="cpu-val">0</span>%
-RAM Usage: [<span id="ram-bar">..........</span>] <span id="ram-val">0</span>%
-Uptime   : <span id="uptime">00:00:00</span>
-        </pre>
-    </section>
-
-    <footer>
-        <p>--------------------------------------------------</p>
-        <p>SalemOS (v0.1) - Press ESC for Menu | Q to Exit</p>
-    </footer>
-
-    <script src="shit%20script.js"></script>
+    <script src="salem-kernel.js"></script>
 </body>
 </html>

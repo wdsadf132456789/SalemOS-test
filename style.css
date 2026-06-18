@@ -1,13 +1,51 @@
-body { background: #000; color: #00FF00; font-family: 'Courier New', monospace; padding: 20px; }
-h1, h2 { font-size: 1em; text-transform: uppercase; }
-ul { list-style-type: none; padding: 0; }
-a { color: #00FF00; text-decoration: none; display: block; padding: 2px; }
+body {
+    background-color: #000;
+    color: #0f0;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
 
-/* The focus class for keyboard navigation */
-.nav-item.focused { background: #00FF00; color: #000; font-weight: bold; }
+#desktop::before {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 10;
+}
 
-.hidden { display: none; }
-#links-menu {
-position: fixed; top: 0; left: 0; width: 100%;
-background: #00FF00; color: #000; font-weight: bold; padding: 10px;
+#terminal-frame {
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #0f0;
+    padding-bottom: 5px;
+}
+
+#cli-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    text-shadow: 0 0 5px #0f0;
+}
+
+.prompt-line {
+    display: flex;
+    align-items: center;
+}
+
+#cli-input {
+    background: transparent;
+    border: none;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    flex-grow: 1;
+    outline: none;
 }
